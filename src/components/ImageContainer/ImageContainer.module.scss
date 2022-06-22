@@ -1,8 +1,14 @@
-.ImageContainer {
-  display: grid;
-  gap: 3.2rem 3rem;
-  grid-template-columns: repeat(3, 370px);
+@import '../../styles/vendor/vars.scss';
+@import '../../styles/vendor/mixins.scss';
+
+.items {
+  @include d-flex;
+  flex-wrap: wrap;
   margin-bottom: 8rem;
+  @media (max-width: $bp-sm) {
+    margin-bottom: 4.8rem;
+    justify-content: center;
+  }
 }
 
 .btn {
@@ -10,6 +16,7 @@
   text-align: center;
   margin-bottom: 18.4rem;
   button {
+    width: 17rem;
     text-transform: uppercase;
     font-size: 1.4rem;
     font-family: inherit;
@@ -22,5 +29,8 @@
       background-color: #777686;
       color: #fff;
     }
+  }
+  @media (max-width: $bp-sm) {
+    margin-bottom: 22.4rem;
   }
 }

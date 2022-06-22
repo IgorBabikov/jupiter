@@ -1,11 +1,13 @@
 import ImageItem from '../imageItem/ImageItem';
-
 import style from './ImageContainer.module.scss';
 
 function ImageContainer() {
   return (
     <>
-      <div className={style.ImageContainer}>
+      <div className={style.items}>
+        <ImageItem />
+        <ImageItem />
+        <ImageItem />
         <ImageItem />
         <ImageItem />
         <ImageItem />
@@ -15,7 +17,7 @@ function ImageContainer() {
       </div>
 
       <div className={style.btn}>
-        <button >Load More</button>
+        <button>Load More</button>
       </div>
     </>
   );

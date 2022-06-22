@@ -1,10 +1,14 @@
 @import '../../styles/vendor/mixins.scss';
+@import '../../styles/vendor/vars.scss';
 
-.filters {
+.list {
   max-width: 56.3rem;
   width: 100%;
   margin: 8rem auto 7.5rem;
   @include d-flex;
+  @media (max-width: $bp-sm) {
+    opacity: 0;
+  }
 }
 
 .item {
@@ -12,6 +16,32 @@
   color: rgba(#391400, 64%);
   transition: all 0.2s linear;
   &:hover {
-   color: #391400;
+    color: #391400;
+  }
+}
+
+.select {
+  position: relative;
+  text-align: center;
+  margin: 3.2rem 0 4.8rem;
+  select {
+    display: inline-block;
+    padding: 0.81em 1em;
+    width: 32.9rem;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #f3d1bf;
+    border-radius: 0.38em;
+    appearance: none;
+    font-family: inherit;
+    color: rgba(#391400, 64%);
+    cursor: pointer;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateX(-50%);
+    pointer-events: none;
   }
 }

@@ -1,7 +1,16 @@
 @import '../../styles/vendor/vars.scss';
 
-.imageItem {
+.block {
   position: relative;
+  max-width: 37rem;
+  width: 100%;
+  margin-bottom: 3.2rem;
+  img {
+    width: 100%;
+  }
+  @media (max-width: $bp-sm) {
+    padding: 0 1rem;
+  }
 }
 
 .filter {
