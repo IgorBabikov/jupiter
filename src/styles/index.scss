@@ -14,19 +14,8 @@ body {
   font-weight: 400;
   color: $black;
   line-height: 1.5;
+  background-color: #fdf0e9;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  min-height: 100vh;
-}
-
-
-@import 'block/title';
-

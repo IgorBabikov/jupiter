@@ -1,0 +1,29 @@
+@import '../../styles/vendor/vars.scss';
+
+.imageItem {
+  position: relative;
+}
+
+.filter {
+  position: absolute;
+  bottom: 12.2rem;
+  left: 4.8rem;
+  background-color: #fff;
+  color: #391400;
+  padding: 0.56em 1.06em;
+  border-radius: 1.19em;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: #c6dbcb;
+  }
+}
+
+.title {
+  position: absolute;
+  bottom: 5.3rem;
+  left: 4.8rem;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $white;
+}
