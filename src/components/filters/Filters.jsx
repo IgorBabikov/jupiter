@@ -1,23 +1,24 @@
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setSortCategory } from '../../redux/slices/sortSlice';
 import style from './filters.module.scss';
 
-const filtersItems = [
-  { name: 'Show All', type: 'all' },
-  { name: 'Designl', type: 'design' },
-  { name: 'Branding', type: 'branding' },
-  { name: 'Illustration', type: 'illustration' },
-  { name: 'Motion', type: 'motion' },
-];
+const filtersItems = ['Show All', 'Design', 'Branding', 'Illustration', 'Motion'];
 
 function Filters() {
   const screenWidth = window.screen.width;
+  const dispatch = useDispatch();
+  const { category } = useSelector((state) => state.sortSlice);
+
+  const onClickFilter = (type) => {
+    dispatch(setSortCategory(type));
+  };
 
   return screenWidth <= 1040 ? (
     <div className={style.select}>
       <select name="select">
         {filtersItems.map((item) => (
-          <option key={item.name} value={item.name}>
-            {item.name}
+          <option key={item} value={item}>
+            {item}
           </option>
         ))}
       </select>
@@ -26,8 +27,11 @@ function Filters() {
   ) : (
     <ul className={style.list}>
       {filtersItems.map((item) => (
-        <li className={style.item} key={item.name}>
-          {item.name}
+        <li
+          onClick={() => onClickFilter(item)}
+          className={category === item ? style.active : style.item}
+          key={item}>
+          {item}
         </li>
       ))}
     </ul>

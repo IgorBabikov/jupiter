@@ -15,9 +15,15 @@
   cursor: pointer;
   color: rgba(#391400, 64%);
   transition: all 0.2s linear;
+
   &:hover {
     color: #391400;
   }
+}
+
+.active {
+  color: #16cd53;
+  cursor: pointer;
 }
 
 .select {

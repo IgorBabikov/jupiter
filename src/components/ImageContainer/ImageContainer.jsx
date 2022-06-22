@@ -7,11 +7,11 @@ import style from './ImageContainer.module.scss';
 function ImageContainer() {
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.dataSlice);
-  const { limit } = useSelector((state) => state.sortSlice);
+  const { limit, category } = useSelector((state) => state.sortSlice);
 
   useEffect(() => {
-    dispatch(setFetchData(limit));
-  }, [limit]);
+    dispatch(setFetchData(limit, category));
+  }, [limit, category]);
 
   return (
     <>

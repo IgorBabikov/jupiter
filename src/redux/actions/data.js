@@ -1,7 +1,7 @@
  import {getData} from '../../services/getData'
 
- export const setFetchData = (limit) => dispatch => {
-   getData(limit)
+ export const setFetchData = (limit, category) => dispatch => {
+   getData(limit, category)
    .then((data) => dispatch(setData(data)))
    dispatch(setLoaded(false))
  }

@@ -2,7 +2,7 @@ import { createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
    limit: 9,
-   category: 0
+   category: 'Show All'
 }
 
 const sortSlice = createSlice({
