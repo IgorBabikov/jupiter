@@ -1,0 +1,32 @@
+@import 'vendor/fonts';
+@import 'vendor/mixins';
+@import 'vendor/reset';
+@import 'vendor/vars';
+@import 'vendor/container';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $black;
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+
+@import 'block/title';
+

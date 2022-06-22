@@ -1,0 +1,59 @@
+@import '../../styles/vendor/vars.scss';
+@import '../../styles/vendor/mixins.scss';
+
+.header {
+  padding: 1.5rem 0 5.8rem;
+  background-color: #28293e;
+  color: $white;
+}
+
+.inner {
+  @include d-flex;
+}
+
+.logo {
+  width: 13.9rem;
+  height: 4.3rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.list {
+  @include d-flex;
+  max-width: 52.2rem;
+  width: 100%;
+}
+
+.item {
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1.07em 2.79em;
+  background: transparent;
+  color: $white;
+  border: 1px solid rgba($white, 29%);
+  border-radius: 0.43em;
+}
+
+.content {
+  text-align: center;
+  margin-top: 9.3rem;
+  h1 {
+    font-size: 7.2rem;
+    font-weight: 800;
+  }
+
+  p {
+    max-width: 57rem;
+    width: 100%;
+    margin: 0 auto;
+    color: rgba($white, 64%);
+    line-height: 2;
+  }
+}
