@@ -1,19 +1,24 @@
 import ImageItem from '../imageItem/ImageItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFetchData } from '../../redux/actions/data';
+import { useEffect } from 'react';
 import style from './ImageContainer.module.scss';
 
 function ImageContainer() {
+  const dispatch = useDispatch();
+  const { data } = useSelector((state) => state.dataSlice);
+  const { limit } = useSelector((state) => state.sortSlice);
+
+  useEffect(() => {
+    dispatch(setFetchData(limit));
+  }, [limit]);
+
   return (
     <>
       <div className={style.items}>
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
-        <ImageItem />
+        {data.map((item) => (
+          <ImageItem key={item.id} {...item} />
+        ))}
       </div>
 
       <div className={style.btn}>

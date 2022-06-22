@@ -1,11 +1,11 @@
 import style from './imageItem.module.scss';
 
-function ImageItem() {
+function ImageItem({filter, title, img}) {
   return (
     <div className={style.block}>
-       <img src="img/image-item.png" alt="item" />
-       <button className={style.filter}>Design</button>
-       <h3 className={style.title}>SOFA</h3>
+       <img src={img} alt={title} />
+       <button className={style.filter}>{filter}</button>
+       <h3 className={style.title}>{title}</h3>
     </div>
   )
 }
