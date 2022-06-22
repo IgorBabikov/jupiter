@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Filters from '../filters/Filters';
 
 function Main() {
   return (
-    <div>
-     
+    <div className="main">
+      <div className="container">
+        <Filters />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Main
+export default Main;

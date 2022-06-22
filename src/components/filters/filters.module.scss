@@ -1,0 +1,17 @@
+@import '../../styles/vendor/mixins.scss';
+
+.filters {
+  max-width: 56.3rem;
+  width: 100%;
+  margin: 8rem auto 7.5rem;
+  @include d-flex;
+}
+
+.item {
+  cursor: pointer;
+  color: rgba(#391400, 64%);
+  transition: all 0.2s linear;
+  &:hover {
+   color: #391400;
+  }
+}

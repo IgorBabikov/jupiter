@@ -27,6 +27,12 @@
 }
 
 .item {
+  a {
+    transition: all 0.2s linear;
+    &:hover {
+      color: #d3c3c3;
+    }
+  }
 }
 
 .btn {
@@ -39,6 +45,12 @@
   color: $white;
   border: 1px solid rgba($white, 29%);
   border-radius: 0.43em;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
 
 .content {
