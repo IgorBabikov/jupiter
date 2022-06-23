@@ -22,16 +22,16 @@ const ImageItem = memo(function ImageItem({ id, filter, title, img }) {
   const onDeleteItem = async (id) => {
     if (window.confirm('Вы точно хотите удалить?')) {
       dispatch(setDeleteItem(id));
-      deteleData(id)
+      deteleData(id);
     }
   };
 
   return (
     <div onClick={onClickImg} className={active ? style.active : style.block}>
       <img src={img} alt={title} />
-      <button onClick={onClickShowFilter} className={style.filter}>
-        {filter}
-      </button>
+        <button onClick={onClickShowFilter} className={style.filter}>
+          {filter}
+        </button>
       <h3 className={style.title}>{title}</h3>
 
       {active ? (
