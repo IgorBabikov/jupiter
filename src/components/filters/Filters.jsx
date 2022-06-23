@@ -15,7 +15,7 @@ function Filters() {
 
   return screenWidth <= 1040 ? (
     <div className={style.select}>
-      <select name="select">
+      <select onChange={(e) => onClickFilter(e.target.value)} name="select">
         {filtersItems.map((item) => (
           <option key={item} value={item}>
             {item}
