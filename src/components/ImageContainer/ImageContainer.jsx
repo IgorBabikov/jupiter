@@ -16,6 +16,7 @@ function ImageContainer() {
     dispatch(setFetchData(limit, category));
   }, [limit, category]);
 
+
   const onClickMore = () => {
     dispatch(setLimit(limit + 9));
 

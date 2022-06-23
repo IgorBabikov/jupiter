@@ -18,6 +18,13 @@ const dataSlice = (state = initialState, action) => {
             loaded: true
          }
 
+       case 'SET_DELETE_ITEM':
+         return {
+            ...state,
+            data: state.data.filter(item => item.id !== action.payload),
+            loaded: true
+         }
+
       default: return state
    }
 }

@@ -15,7 +15,6 @@
   }
 }
 
-
 .filter {
   position: absolute;
   bottom: 12.2rem;
@@ -39,8 +38,21 @@
   color: $white;
 }
 
-
 .active {
-  border: 7px solid #4FE24A;
+  border: 7px solid #4fe24a;
   border-radius: 15px;
+}
+
+.delete {
+  font-family: inherit;
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  background-color: red;
+  color: #fff;
+  padding: 0.5em 1em;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: #c90707;
+  }
 }
