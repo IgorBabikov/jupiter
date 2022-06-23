@@ -27,15 +27,24 @@
   &:hover {
     background-color: #c6dbcb;
   }
+
+  @media (max-width: $bp-sm) {
+    top: 23.6rem;
+    left: 2.8rem;
+  }
 }
 
 .title {
   position: absolute;
-  bottom: 5.3rem;
+  top: 31rem;
   left: 4.8rem;
   font-size: 4rem;
   font-weight: 300;
   color: $white;
+  @media (max-width: $bp-sm) {
+    top: 29rem;
+    left: 2.8rem;
+  }
 }
 
 .active {
